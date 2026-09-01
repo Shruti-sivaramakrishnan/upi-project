@@ -1,0 +1,3 @@
+scenario,current_mu,mu_needed_for_rho_0.9,growth_pct_required
+peak_baseline (tight),8763.915895061727,11630.518859552725,32.70915648684243
+sensitivity_high (generous),12425.986111111111,11630.518859552725,-6.401642851081996
