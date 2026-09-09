@@ -1,0 +1,15 @@
+metric,value
+observations,24
+duplicate_months,0
+missing_values,0
+formula_max_difference,2.842170943040401e-14
+ampi_minimum,75.38027713888476
+ampi_maximum,104.35826864020063
+ampi_mean,89.63378091468157
+ampi_median,88.58434765597131
+highest_month,2024-02-01
+lowest_month,2024-11-01
+march_2025_rank,5
+march_2025_percentile,82.6086956521739
+april_2025_rank,12
+april_2025_percentile,52.17391304347826
