@@ -1,4 +1,4 @@
-﻿import pandas as pd, numpy as np
+import pandas as pd, numpy as np
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 
 df = pd.read_csv("processed/upi_monthly.csv", parse_dates=["month"]).sort_values("month")
@@ -15,5 +15,5 @@ print("Expected: Model 1 AIC 684.0 BIC 693.3 | Model 2 AIC 681.0 BIC 686.6")
 r = fits["Model 2"]
 tab = pd.DataFrame({"coef": r.params, "std_err": r.bse, "p_value": r.pvalues}).round(4)
 print(tab.to_string())
-print("Invertible (|MA coef| < 1):", bool((r.params.filter(like="ma").abs() < 1).all()))
+print("Invertible (|MA coef| < 1):", bool((r.params[["ma.L1","ma.S.L12"]].abs() < 1).all()))
 tab.to_csv("processed/sarima_model2_coefficients.csv")
